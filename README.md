@@ -24,5 +24,5 @@ secrets/PII handling and least-privilege access.
 
 ---
 
-*More case studies coming. Reach me on [LinkedIn](https://www.linkedin.com/) — source and
-deeper technical walkthroughs available on request.*
+*More case studies coming. Reach me on [LinkedIn](https://www.linkedin.com/in/slstech/) —
+source and deeper technical walkthroughs available on request.*
