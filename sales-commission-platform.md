@@ -68,6 +68,29 @@ fact table → the commission engine → ledger/payouts and per-instructor repor
 from a cached in-memory snapshot of Postgres; all writes go through the service role behind an
 explicit admin check, with Row-Level Security as defense-in-depth.
 
+## Screenshots
+*Real screens from the running app. Client/instructor names, emails, and license numbers are redacted.*
+
+### Admin dashboard
+![Admin dashboard](images/01-dashboard.png)
+Month sales, expected commission per instructor, who-to-pay, and a revenue trend — the operator's single view.
+
+### Commission run
+![Commission run](images/02-commission-run.png)
+Per-instructor totals for a period, with unmapped-SKU and anomaly flags surfaced for review, and one-click finalize to the ledger.
+
+### Instructor payout report
+![Instructor payout report](images/03-payout-report.png)
+Per-course breakdown with **previous balance + month total = final payout**; printable / save-as-PDF for the instructor.
+
+### Ingestion — dry-run preview
+![Import dry-run preview](images/04-import-preview.png)
+Every upload is schema-validated, de-duplicated, and checked for anomalies and formula-injection, then previewed before anything is committed.
+
+### Course configuration & commission splits
+![Courses config](images/05-courses-config.png)
+New products (unmapped sold SKUs) surface for setup; each course's rate and multi-instructor percentage split are configurable.
+
 ## AI / ML approach (honest scope)
 This is a **data-engineering and systems** project, not an LLM application — I'm not going to
 claim AI depth it doesn't have. Where intelligence shows up today it's deterministic:
